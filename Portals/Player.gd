@@ -4,7 +4,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 2
 const MAXFALLSPEED = 100
 const MAXSPEED = 30
-const JUMPFORCE = 60
+const JUMPFORCE = 65
 
 var facing_right = true
 
@@ -40,3 +40,10 @@ func _physics_process(delta):
 			$AnimationPlayer.play("AirLeft")
 			
 	motion = move_and_slide(motion, UP)
+
+
+func _on_DeathArea_body_entered(body):
+	if str(body) == "Player:[KinematicBody2D:1301]":
+		pass # Kill player code goes here
+		
+
