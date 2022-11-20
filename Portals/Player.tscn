@@ -144,7 +144,7 @@ tracks/1/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 20, 72 )
+position = Vector2( 14, 69 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -172,3 +172,7 @@ anims/Idle = SubResource( 2 )
 anims/MoveLeft = SubResource( 3 )
 anims/MoveRight = SubResource( 4 )
 anims/RESET = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
